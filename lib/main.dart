@@ -1,5 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:gabriel_api/model/cliente.dart';
+import 'package:gabriel_api/view/cliente/widgets/cliente_page.dart';
 
 import 'firebase_options.dart';
 import 'view/home/home_page.dart';
@@ -20,7 +22,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Cadastro de Clientes',
       theme: ThemeData(primarySwatch: Colors.teal),
-      home: const HomePage(),
+      routes: {
+        '/': (context) => const HomePage(),
+      },
+      onGenerateRoute: (settings) {
+        if (settings.name == '/cliente/') {
+          final cliente = settings.arguments as Cliente?;
+          return MaterialPageRoute(
+            builder: (_) => ClientePage(
+              cliente: cliente,
+            ),
+          );
+        }
+        return null;
+      },
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Pedidos extends StatelessWidget {
-  const Pedidos({Key? key}) : super(key: key);
+class ListaPedidos extends StatelessWidget {
+  const ListaPedidos({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class Pedidos extends StatelessWidget {
                       Icons.search,
                       size: 30,
                     ),
-                    hintText: 'Filtrar Pedidos',
+                    hintText: 'Filtrar ListaPedidos',
                     border: OutlineInputBorder(
                       borderSide: BorderSide.none,
                       borderRadius: BorderRadius.circular(25),

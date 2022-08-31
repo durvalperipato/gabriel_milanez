@@ -60,13 +60,13 @@ class _BottomNavigationState extends State<_BottomNavigation> {
   void _itemSelected(int value) {
     switch (value) {
       case 0:
-        widget.onTap(const ListaClientes());
+        widget.onTap(const ClienteHomePage());
         break;
       case 1:
         widget.onTap(const NovoPedido());
         break;
       case 2:
-        widget.onTap(const Pedidos());
+        widget.onTap(const ListaPedidos());
         break;
       case 3:
         widget.onTap(const Usuario());

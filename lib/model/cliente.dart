@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
 class Cliente {
@@ -5,7 +6,7 @@ class Cliente {
   String cnpj;
   String cidade;
   String uf;
-  String? nomeFantasia;
+  String nomeFantasia;
   String? telefoneContato;
   String? nomeRepresentante;
 
@@ -14,7 +15,7 @@ class Cliente {
     required this.cnpj,
     required this.cidade,
     required this.uf,
-    this.nomeFantasia,
+    required this.nomeFantasia,
     this.telefoneContato,
     this.nomeRepresentante,
   });
@@ -35,7 +36,7 @@ class Cliente {
     return Cliente(
       nomeEmpresarial: map['nome_empresarial'] as String,
       cnpj: map['cnpj'] as String,
-      nomeFantasia: map['nome_fantasia'] != null ? map['nome_fantasia'] as String : null,
+      nomeFantasia: map['nome_fantasia'] as String,
       cidade: map['cidade'] as String,
       uf: map['uf'] as String,
       telefoneContato: map['telefone_contato'] != null ? map['telefone_contato'] as String : null,
